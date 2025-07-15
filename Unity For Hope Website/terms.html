@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    
+    <section class="terms-conditions">
+        <div class="container">
+            <h1>Terms and Conditions</h1>
+            <p>Last updated: 25/10/2024</p>
+
+            <h2>1. Introduction</h2>
+            <p>Welcome to Unity for Change Foundation. These Terms and Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms.</p>
+
+            <h2>2. Acceptance of Terms</h2>
+            <p>By using our services, you affirm that you are at least 18 years old or have the consent of a parent or guardian. If you do not agree with these terms, you may not access or use our services.</p>
+
+            <h2>3. Use of Services</h2>
+            <p>You agree to use our services only for lawful purposes and in accordance with these Terms and Conditions. You agree not to use our services:</p>
+            <ul>
+                <li>In any way that violates any applicable federal, state, local, or international law or regulation.</li>
+                <li>For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way.</li>
+                <li>To transmit, or procure the sending of, any advertising or promotional material.</li>
+                <li>To impersonate or attempt to impersonate Unity for Change Foundation, a Unity for Change Foundation employee, another user, or any other person or entity.</li>
+            </ul>
+
+            <h2>4. Donations</h2>
+            <p>All donations made through our website are voluntary. We do not provide refunds for donations unless specified. By donating, you acknowledge that you understand how your contribution will be used by the Unity for Change Foundation.</p>
+
+            <h2>5. Intellectual Property Rights</h2>
+            <p>The content on our website, including text, graphics, logos, and images, is the property of Unity for Change Foundation and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>In no event shall Unity for Change Foundation, its directors, employees, partners, agents, suppliers, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+            <ul>
+                <li>Your access to or use of (or inability to access or use) our services;</li>
+                <li>Any conduct or content of any third party on our services;</li>
+                <li>Any content obtained from our services; and</li>
+                <li>Unauthorized access, use, or alteration of your transmissions or content.</li>
+            </ul>
+
+            <h2>7. Governing Law</h2>
+            <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of South Africa, without regard to its conflict of law provisions.</p>
+
+            <h2>8. Changes to Terms and Conditions</h2>
+            <p>We may update our Terms and Conditions from time to time. We will notify you of any changes by posting the new Terms and Conditions on this page. You are advised to review these Terms and Conditions periodically for any changes. Changes to these Terms and Conditions are effective when they are posted on this page.</p>
+
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+            <p>Email: <a href="mailto:info@unityforchange.org.za">info@unityforchange.org.za</a></p>
+            <p>Phone: +27 12 345 6789</p>
+            <p>Office Address: 123 Unity Street, Pretoria, South Africa</p>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script>const themeToggle = document.getElementById('theme-toggle');
+
+       
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', currentTheme);
+        themeToggle.checked = currentTheme === 'dark';
+    
+        
+        themeToggle.addEventListener('change', function() {
+            if (themeToggle.checked) {
+                document.body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light'); 
+            }
+        });  
+        </script>
+
+</body>
+</html>

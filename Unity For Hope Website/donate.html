@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+
+<section class="donation-info">
+    <div class="container">
+        <h1>Donate to Unity for Change Foundation</h1>
+        <p>Your donations help us continue our mission to make a positive impact in communities across South Africa. Every contribution goes directly towards supporting education, health initiatives, food drives, and more.</p>
+
+        <h2>Ways to Donate</h2>
+        <p>You can make a donation using the form below. We accept various payment methods including credit cards and direct transfers. Thank you for your support!</p>
+
+        <h3>Bank Deposit Information</h3>
+        <p>If you would like to make a direct bank deposit, please use the following bank details:</p>
+        <ul class="bank-info">
+            <li><strong>Bank Name:</strong> FNB</li>
+            <li><strong>Account Name:</strong> Unity for Change Foundation</li>
+            <li><strong>Account Number:</strong> 12345678910</li>
+            <li><strong>Branch Code:</strong> 254652</li>
+        </ul>
+        <p>Please include your name as the reference when making the deposit. Once the transfer is completed, feel free to send us a confirmation at info@unityforchange.org.za. Thank you for your generosity!</p>
+    </div>
+</section>
+
+
+   
+    <section class="donation-form">
+        <div class="container-donation">
+            <h2>Make a Donation</h2>
+            <form id="donationForm">
+                
+                <div class="form-group">
+                    <label for="donorName">Full Name:</label>
+                    <input type="text" id="donorName" name="donorName" placeholder="Enter your full name">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="donorEmail">Email:</label>
+                    <input type="email" id="donorEmail" name="donorEmail" placeholder="Enter your email address">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="donorAddress">Address:</label>
+                    <input type="text" id="donorAddress" name="donorAddress" placeholder="Enter your address">
+                    <span class="error-message" id="addressError"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="donationAmount">Donation Amount (ZAR):</label>
+                    <input type="number" id="donationAmount" name="donationAmount" placeholder="Enter amount in ZAR">
+                    <span class="error-message" id="amountError"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select id="paymentMethod" name="paymentMethod">
+                        <option value="">Select a payment method</option>
+                        <option value="credit_card">Credit Card</option>
+                        <option value="bank_transfer">Bank Transfer</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                    <span class="error-message" id="paymentError"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <button type="submit" class="btn">Donate Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+   
+<div id="thankYouModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Thank you for your generous donation! We will use your contribution to make a positive impact.</p>
+    </div>
+</div>
+
+
+   
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script>
+        
+document.getElementById('donationForm').addEventListener('submit', function (e) {
+    e.preventDefault(); 
+
+    
+    const name = document.getElementById('donorName').value;
+    const email = document.getElementById('donorEmail').value;
+    const address = document.getElementById('donorAddress').value;
+    const amount = document.getElementById('donationAmount').value;
+    const paymentMethod = document.getElementById('paymentMethod').value;
+
+   
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+   
+    document.querySelectorAll('.error-message').forEach(function (el) {
+        el.textContent = '';
+    });
+
+    let isValid = true; 
+
+   
+    if (name === '') {
+        document.getElementById('nameError').textContent = 'Please enter your full name.';
+        isValid = false;
+    }
+
+    
+    if (email === '' || !email.match(emailPattern)) {
+        document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+        isValid = false;
+    }
+
+    
+    if (address === '') {
+        document.getElementById('addressError').textContent = 'Please enter your address.';
+        isValid = false;
+    }
+
+    
+    if (amount === '' || isNaN(amount) || parseFloat(amount) <= 0) {
+        document.getElementById('amountError').textContent = 'Please enter a valid donation amount greater than zero.';
+        isValid = false;
+    }
+
+    
+    if (paymentMethod === '') {
+        document.getElementById('paymentError').textContent = 'Please select a payment method.';
+        isValid = false;
+    }
+
+    
+    if (isValid) {
+        showModal(); 
+        document.getElementById('donationForm').reset(); 
+    }
+});
+
+
+function showModal() {
+    const modal = document.getElementById('thankYouModal');
+    const closeModal = document.querySelector('.close');
+
+    modal.style.display = 'block'; 
+
+    
+    closeModal.onclick = function () {
+        modal.style.display = 'none';
+    };
+
+    
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
+
+function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+
+    const themeToggle = document.getElementById('theme-toggle');
+
+   
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', currentTheme);
+    themeToggle.checked = currentTheme === 'dark';
+
+    
+    themeToggle.addEventListener('change', function() {
+        if (themeToggle.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); 
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });  
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Drive Initiative - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+   <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    
+    <section class="project-details">
+        <div class="container">
+            <h1>Food Drive Initiative</h1>
+            <img src="images/food-donations.jpg" alt="Food Drive Initiative Project">
+
+            <p>The Food Drive Initiative was launched in April 2023 to combat hunger in rural and urban areas of South Africa.</p>
+
+            <h2>Locations</h2>
+            <p>This initiative took place in communities across Gauteng, including Johannesburg and Pretoria, as well as the North West province. We distributed food parcels to families in need.</p>
+
+            <h2>Event Overview</h2>
+            <p>Our team, along with volunteers, distributed over 1,500 food parcels to struggling families. We also partnered with local food banks and grocery stores to ensure a steady supply of essentials. The initiative focused on alleviating food insecurity during difficult times.</p>
+
+            <h2>Impact</h2>
+            <p>Through the Food Drive Initiative, we were able to help over 1,000 families. The gratitude and relief from the communities were overwhelming, and we continue to look for ways to provide long-term food security.</p>
+        
+            <a href="projects.html" class="btn back-btn">Back to Projects</a>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+       
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.body.setAttribute('data-theme', currentTheme);
+themeToggle.checked = currentTheme === 'dark';
+
+
+themeToggle.addEventListener('change', function() {
+    if (themeToggle.checked) {
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); 
+    } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); 
+    }
+}); 
+</script>
+</body>
+</html>

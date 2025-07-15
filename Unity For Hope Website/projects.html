@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    
+    <section class="projects">
+        <div class="container">
+            <h1>Our Projects</h1>
+            <p>Explore the impactful projects we have undertaken to empower communities through education, health initiatives, and sustainability.</p>
+
+            <div class="project-grid" id="projects-container">
+               
+            </div>
+        </div>
+    </section>
+
+   
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script>
+    const projects = [
+        {
+            title: "Education Drive",
+            description: "Our Education Drive project focuses on providing learning materials and educational support to underprivileged communities. We believe education is the key to a brighter future.",
+            image: "images/project1.png",
+            link: "project1.html"
+        },
+        {
+            title: "Health and Wellness Camps",
+            description: "Our health camps provide free check-ups, essential treatments, and health education to communities with limited access to healthcare.",
+            image: "images/project2.png",
+            link: "project2.html"
+        },
+        {
+            title: "Environmental Sustainability",
+            description: "We focus on creating sustainable solutions to environmental challenges through tree planting, waste management, and renewable energy projects.",
+            image: "images/project3.png",
+            link: "project3.html"
+        },
+        {
+            title: "Food Drive Initiative",
+            description: "Through the Food Drive Initiative, we aim to provide food supplies to families in need. Our team works with local communities to ensure no one goes to bed hungry.",
+            image: "images/project4.png",
+            link: "project4.html"
+        }
+    ];
+    
+    
+    function displayProjects() {
+        const projectsContainer = document.getElementById('projects-container');
+        projectsContainer.innerHTML = '';
+    
+       
+        projects.forEach(project => {
+            const projectCard = `
+                <div class="project">
+                    <img src="${project.image}" alt="${project.title}">
+                    <h2>${project.title}</h2>
+                    <p>${project.description}</p>
+                    <a href="${project.link}" class="btn">Read More</a>
+                </div>
+            `;
+            projectsContainer.innerHTML += projectCard; 
+        });
+    }
+    
+    
+    window.onload = displayProjects;
+    
+    
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+    
+    const themeToggle = document.getElementById('theme-toggle');
+
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', currentTheme);
+    themeToggle.checked = currentTheme === 'dark';
+
+    
+    themeToggle.addEventListener('change', function() {
+        if (themeToggle.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); 
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');e
+        }
+    });  
+    
+    </script>
+</body>
+</html>

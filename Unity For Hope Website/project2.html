@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Wellness Camps - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+   
+    <section class="project-details">
+        <div class="container">
+            <h1>Health and Wellness Camps</h1>
+            <img src="images/health-wellness.jpg" alt="Health and Wellness Camps Project">
+
+            <p>Since February 2023, our Health and Wellness Camps have been providing free healthcare services and health education to rural communities in South Africa.</p>
+
+            <h2>Locations</h2>
+            <p>The camps were set up in the Limpopo and Mpumalanga provinces, including villages near Polokwane and Nelspruit. Our goal was to reach communities with limited access to healthcare facilities.</p>
+
+            <h2>Event Overview</h2>
+            <p>The health camps offered free medical check-ups, vaccinations, and health workshops. We worked with local clinics and healthcare professionals to treat over 1,200 patients, many of whom had not received medical care in years.</p>
+
+            <h2>Impact</h2>
+            <p>These camps helped raise awareness about preventative healthcare and provided essential medical services to communities in need. Follow-up visits are planned to ensure continued support for these areas.</p>
+        
+            <a href="projects.html" class="btn back-btn">Back to Projects</a>
+        </div>
+    </section>
+
+  
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.body.setAttribute('data-theme', currentTheme);
+themeToggle.checked = currentTheme === 'dark';
+
+
+themeToggle.addEventListener('change', function() {
+    if (themeToggle.checked) {
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); 
+    } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); 
+    }
+}); 
+</script>
+</body>
+</html>

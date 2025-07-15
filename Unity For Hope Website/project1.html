@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Drive - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="project-details">
+        <div class="container">
+            <h1>Education Drive</h1>
+            <img src="images/education-drive.jpg" alt="Education Drive Project">
+
+            <p>The Education Drive was launched in January 2023, aimed at improving access to learning materials and educational support for underprivileged communities in South Africa.</p>
+
+            <h2>Locations</h2>
+            <p>This initiative was carried out in various schools across Gauteng, KwaZulu-Natal, and the Eastern Cape. We worked with local schools in Soweto, Durban, and Mthatha to provide essential learning tools, including textbooks, stationery, and laptops.</p>
+
+            <h2>Event Overview</h2>
+            <p>The Education Drive involved setting up community workshops where students and teachers received educational resources and support. We partnered with local educational institutions and volunteers to reach over 2,500 students. The event was well-received, with a significant improvement in student engagement and learning outcomes.</p>
+
+            <h2>Impact</h2>
+            <p>The Education Drive has helped bridge the gap between under-resourced schools and those with better access to educational tools. The feedback from teachers and students has been overwhelmingly positive, and we plan to continue supporting these schools in the coming years.</p>
+        
+            <a href="projects.html" class="btn back-btn">Back to Projects</a>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+            
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', currentTheme);
+    themeToggle.checked = currentTheme === 'dark';
+
+    
+    themeToggle.addEventListener('change', function() {
+        if (themeToggle.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); 
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light'); 
+        }
+    }); 
+    </script>
+</body>
+</html>

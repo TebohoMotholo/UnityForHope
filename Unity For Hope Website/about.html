@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+
+       
+        <div class="angled-divider-top"></div>
+
+        
+        <section class="about-us">
+            <div class="container">
+                <h1>About Unity for Change Foundation</h1>
+                <p>Unity for Change Foundation is a nonprofit organization dedicated to empowering communities through education, health initiatives, and sustainability projects. We believe in building a brighter future by addressing local challenges and improving the lives of individuals.</p>
+            </div>
+        </section>
+    
+        
+        <div class="angled-divider"></div>
+    
+        
+        <section class="our-history">
+            <div class="container">
+                <h2>Our History</h2>
+                <p>Founded in 2022, Unity for Change Foundation began as a small group of volunteers passionate about addressing community challenges. Initially focusing on educational programs, we quickly expanded into healthcare and environmental projects as we saw the growing needs in our communities.</p>
+            </div>
+        </section>
+    
+        
+        <div class="angled-divider"></div>
+    
+        
+        <section class="our-mission">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <p>Our mission is to foster community development by focusing on education, healthcare, and environmental sustainability. We strive to create programs that have a lasting impact on the people we serve, ensuring that every step we take is one towards a more united and prosperous future.</p>
+            </div>
+        </section>
+
+            
+        <div class="angled-divider"></div>
+    
+        
+        <section class="our-vision">
+            <div class="container">
+                <h2>Our Vision</h2>
+                <p>We envision a world where communities are self-sufficient, where every individual has access to education, healthcare, and the resources they need to thrive. Through our initiatives, we aim to reduce inequality, promote health and wellness, and support sustainable practices for a better tomorrow.</p>
+            </div>
+        </section>
+
+            
+        <div class="angled-divider"></div>
+    
+        
+        <section class="our-values">
+            <div class="container">
+                <h2>Our Values</h2>
+                <ul>
+                    <li><strong>Compassion:</strong> We are committed to serving with kindness and understanding, ensuring that the needs of our communities are met.</li>
+                    <li><strong>Integrity:</strong> We uphold transparency, accountability, and honesty in all our actions.</li>
+                    <li><strong>Collaboration:</strong> We believe that by working together, we can achieve greater results and make a bigger difference.</li>
+                    <li><strong>Sustainability:</strong> We focus on long-term solutions that have lasting positive effects on the environment and society.</li>
+                </ul>    
+                
+                <a href="projects.html" class="btn">Learn About Our Projects</a>
+            </div>
+        </section>
+        
+        <div class="angled-divider"></div>
+
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-container" id="team-container">
+                
+            </div>
+        </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+   <script>
+
+        function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+            
+            const teamMembers = [
+            {
+                name: "Palesa Nduma",
+                position: "Founder",
+                image: "images/Palesa.jpg" 
+            },
+            {
+                name: "Tshepiso Hlongwane",
+                position: "Program Manager",
+                image: "images/Tshepiso.jpg" 
+            },
+            {
+                name: "Dineo Nyalunga",
+                position: "Community Outreach Coordinator",
+                image: "images/Dineo.jpg" 
+            },
+            {
+                name: "Anam Madolo",
+                position: "Finance Officer",
+                image: "images/Anam.jpg" 
+            }
+        ];
+
+        
+        function displayTeamMembers() {
+            const teamContainer = document.getElementById('team-container');
+            teamMembers.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'team-card';
+                card.innerHTML = `
+                    <img src="${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p>${member.position}</p>
+                `;
+                teamContainer.appendChild(card);
+            });
+        }
+
+        
+        displayTeamMembers();
+
+        const themeToggle = document.getElementById('theme-toggle');
+
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', currentTheme);
+    themeToggle.checked = currentTheme === 'dark';
+
+    
+    themeToggle.addEventListener('change', function() {
+        if (themeToggle.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); 
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light'); 
+        }
+    });  
+   </script>
+</body>
+</html>

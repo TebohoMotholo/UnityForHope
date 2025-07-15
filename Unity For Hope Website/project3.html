@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Sustainability - Unity for Change Foundation</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    
+    <section class="project-details">
+        <div class="container">
+            <h1>Environmental Sustainability</h1>
+            <img src="images/enviromental-Sustainabilty.jpg" alt="Environmental Sustainability Project">
+
+            <p>The Environmental Sustainability project began in March 2023 and focuses on promoting eco-friendly practices in South African communities.</p>
+
+            <h2>Locations</h2>
+            <p>We worked with communities in Cape Town, Stellenbosch, and Johannesburg to conduct tree planting events and promote waste management programs.</p>
+
+            <h2>Event Overview</h2>
+            <p>We partnered with local environmental organizations to plant over 5,000 trees and set up recycling stations in urban and rural areas. Community members were educated on the importance of environmental conservation and sustainability practices.</p>
+
+            <h2>Impact</h2>
+            <p>This initiative has improved the environmental consciousness of the communities we’ve engaged. The tree planting and waste management programs have had a visible positive effect on the environment.</p>
+        
+            <a href="projects.html" class="btn back-btn">Back to Projects</a>
+        </div>
+    </section>
+
+   
+    <footer>
+        <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.body.setAttribute('data-theme', currentTheme);
+themeToggle.checked = currentTheme === 'dark';
+
+
+themeToggle.addEventListener('change', function() {
+    if (themeToggle.checked) {
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); 
+    } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); 
+    }
+}); 
+</script>
+</body>
+</html>

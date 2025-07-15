@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity for Change Foundation - Home</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Homepage.html" class="logo">
+                <img src="images/logo.png" alt="Unity for Change Foundation Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="Homepage.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section class="typing-hero">
+            <div class="hero-logo">
+                <img src="images/hero-logo.png" alt="Unity for Change Foundation Logo">
+            </div>
+            <h1 id="typing-text"></h1>
+            <p>Join Unity for Change Foundation in empowering communities through education, health, and sustainability initiatives.</p>
+        </section>
+                       
+
+        
+        <section class="carousel-container">
+            <h2>Community Highlights</h2>
+            <div class="mySlides fade">
+                <img src="images/community1.jpg" alt="Community Project 1">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="images/community2.jpg" alt="Community Project 2">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="images/community3.jpg" alt="Community Project 3">
+            </div>
+        
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+            
+        
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>We strive to create a positive impact in the lives of individuals through projects that promote education, health, and sustainable development.</p>
+        </section>
+
+                    
+<section class="statistics">
+    <h2>Our Impact</h2>
+    <div class="stats">
+        <div class="stat">
+            <h3 data-target="210">0</h3>
+            <p>Lives Impacted</p>
+        </div>
+        <div class="stat">
+            <h3 data-target="4">0</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+            <h3 data-target="68">0</h3>
+            <p>Volunteers Engaged</p>
+        </div>
+    </div>
+</section>
+
+        <section class="call-to-action">
+            <h2>Get Involved</h2>
+            <p>Become a part of our mission. Sign up as a volunteer or donate to support our cause.</p>
+            <a href="volunteer.html" class="btn">Volunteer Now</a>
+            <a href="donate.html" class="btn">Donate</a>
+        </section>
+    </main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Email: <a href="mailto:info@unityforchange.org.za">info@unityforchange.org.za</a></p>
+            <p>Phone: +27 12 345 6789</p>
+            <p>Address: 123 Unity Street, Pretoria, South Africa</p>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2024 Unity for Change Foundation. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js" defer></script>
+    
+</body>
+</html>
